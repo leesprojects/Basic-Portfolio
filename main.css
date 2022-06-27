@@ -1,14 +1,14 @@
 body {
-  min-height: auto;
-  min-width: 100%;
+  padding: 0;
   margin: 0;
+  font-size: 18px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 a {
@@ -16,77 +16,47 @@ a {
 }
 
 .nav-container {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  min-height: auto;
-  background: #d9c0fa;
-}
-.nav-container header {
-  display: block;
-  justify-content: space-between;
-}
-.nav-container ul {
-  list-style-type: none;
+  background: skyblue;
+  color: black;
   overflow: hidden;
 }
-.nav-container li {
+.nav-container a {
+  padding: 10px 15px;
+  font-size: 15px;
   float: left;
 }
-.nav-container li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
+.nav-container a:hover {
+  background-color: white;
 }
-.nav-container li a:hover {
-  background-color: purple;
+.nav-container a:visited {
+  color: black;
+}
+.nav-container a:active {
+  background-color: rgb(255, 172, 186);
 }
 
-.content {
-  margin: auto;
-  align-content: center;
-}
-.content .section-title {
-  background: lightgreen;
-}
-.content .section-content {
-  background: lightcyan;
-}
-.content .section-content h3 {
-  text-align: center;
-}
-.content .section-content div {
+.content-container {
   text-align: center;
 }
 
-footer {
-  display: block;
-  justify-content: space-between;
-  position: fixed;
+.footer-container {
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  min-height: 5em;
+  height: 8%;
   background: skyblue;
-}
-footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
 }
-footer li {
+.footer-container li {
+  padding: 0px 60px;
   float: left;
-  min-width: 5em;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
+}
+
+.table {
+  display: table;
+  margin: 0 auto;
+}
+.table #horizontal-li li {
+  display: inline;
 }/*# sourceMappingURL=main.css.map */

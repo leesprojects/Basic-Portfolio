@@ -1,15 +1,15 @@
 //General
 body {
-    min-height: auto;
-    min-width: 100%;
+    padding: 0;
     margin: 0;
+    font-size: 18px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   }
   
-  ul {
+  ul{
     list-style-type: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
   
   a {
@@ -18,94 +18,57 @@ body {
   
   //Header
   .nav-container {
-    display:flex;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    min-height: auto;
-    background: #d9c0fa;
+    background: skyblue;
+    color: black;
+    overflow: hidden;
 
-    header{
-        display: block;
-        justify-content: space-between;
-    }
-
-    ul{
-        list-style-type: none;
-        overflow: hidden;
-    }
-
-    li{
+    a{ //Links within each nav 
+        padding: 10px 15px;
+        font-size: 15px;
         float: left;
     }
 
-    li a{
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 16px;
-        text-decoration: none;
+    a:hover{
+        background-color: white;
     }
 
-    li a:hover{
-        background-color: purple;
-    }
-  }
-
-  
-  //Body
-  .content{
-    margin: auto;
-    align-content: center;
-
-    .section-title{
-        background: lightgreen;
+    a:visited{
+        color: black;
     }
 
-    .section-content{
-        background: lightcyan;
-    }
-
-    .section-content h3{
-        text-align: center
-    }
-
-    .section-content div{
-        text-align: center;
+    a:active{
+        background-color: rgb(255, 172, 186);
     }
   }
-  
 
+//Content
+  .content-container{
+    text-align: center;
+  }
+  
   //Footer
-  footer {
-    display: block;
-    justify-content: space-between;
-    position: fixed;
+  .footer-container{
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    min-height: 5em;
+    height: 8%;
     background: skyblue;
-
-    ul{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
+    overflow: hidden;
 
     li{
+        padding: 0px 60px;
         float: left;
-        min-width: 5em;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 16px;
-        text-decoration: none;
     }
-  }
+  } 
 
- 
+  .table{
+    display: table;
+    margin: 0 auto;
+
+    #horizontal-li{
+        li{
+            display: inline;
+        }
+    }
+}
