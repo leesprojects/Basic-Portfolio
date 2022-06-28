@@ -8,11 +8,12 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="js/main.js"></script>
 </head>
+
+
 <body>
-    <!--Navigation Bar Container-->
-    <div class = "nav-container">
-        <div class="table">
-            <ul id="horizontal-li">
+    <header class = "header-navbar">
+        <nav class="table">
+            <ul class = "horizontal-li">
                 <li><a href="">Home</a></li>
                 <li><a href="">C# Unity Projects</a></li>
                 <li><a href="">C# Software Projects</a></li>
@@ -20,50 +21,46 @@
                 <li><a href="">Stack Development</a></li>
                 <li><a href="">Other</a></li>
             </ul>
-        </div>
-    </div> 
-    
-    <!--Black Bar Divider-->
-    <div style="background: black; height: 7px";></div>
-    
-    <!--Content Container-->
-    <div class = "content-container">
-        <div class = "section-title">
-            <h1>Lee Stevens</h1>
+        </nav>
+        <div style="background: black; height: 7px";></div>
+    </header>
+
+    <section class = "section-aboutme">
+        <div>
+            <h1 class = "section-title">Lee Stevens</h1>
             <h3>Game Developer</h3>
-            <h5>C#, VBA, Python, Full-Stack</h5>
+            <p>C#, VBA, Python, Full-Stack</p>
         </div>
-        <div class = section-content>
-            <h3>Game Development - Unity</h3>
-            <div>
-                <p>Fish</p>
-            </div>
+    </section>
 
-            <h3>Software Development - C# & VBA</h3>
-            <div>
-                <p>Dog</p>
-            </div>
+    <section class = "section-links">
+        <h2 class = "section-title">Section Title 1</h2>
+        <p class = "section-subtitle">Section subtitle 1</p>
 
-            <h3>Web Development- Html, SCSS, JS</h3>
-            <div>
-                <p>Cat</p>
+        <h3>Game Development - Unity</h3>
+        <p>Fish</p>
+        <h3>Software Development - C# & VBA</h3>
+        <p>Dog</p>
+        <h3>Web Development- Html, SCSS, JS</h3>
+        <p>Cat</p>
+    </section>
+
+    <footer class = "footer-socials">
+        <p>Find my socials!</p>
+        <nav class>
+            <div class = "table", id = "footer-socials-table">
+                <ul class = "horizontal-li">
+                    <li class = "li-img"><img class = "img-socials" src = "/media/images/Icon - LinkedIn.png"></li>
+                    <li><a href="https://www.linkedin.com/in/lee-stevens-gd/">LinkedIn</a></li>
+                    <li class = "li-img"><img class = "img-socials" src = "/media/images/Icon - Github.png"></li>
+                    <li><a href="https://github.com/leesprojects">GitHub</a></li>
+                    <li class = "li-img"><img class = "img-socials" src = "/media/images/Icon - Phone.png"></li>
+                    <li>07495266280</li>
+                </ul>
             </div>
-        </div>
-    </div>
-    <!--Footer Container-->
-    <div class = "footer-container">
-        <footer>
-            <p style="text-align: center;">Find my socials!</p>
-            <nav>
-                <div class="table">
-                    <ul id="horizontal-li">
-                        <li><a href="https://www.linkedin.com/in/lee-stevens-gd/">LinkedIn</a></li>
-                        <li><a href="https://github.com/leesprojects">GitHub</a></li>
-                        <li>Phone Number (UK): 07495 266 280</li>
-                    </ul>
-                </div>
-            </nav>
-        </footer>
-    </div>
+        </nav>
+    </footer>
+       
+
 </body>
 </html>

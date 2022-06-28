@@ -1,8 +1,54 @@
-body {
-  padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-size: 18px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding: 0;
+}
+
+:root {
+  --ff-primary: "Source Sans Pro", sans-seriff;
+  --ff-secondary: "Source Code Pro", monospace;
+  --fw-reg: 300;
+  --fw-bold: 900;
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #90dcff;
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body:1rem;
+  --lh: 1.6;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body:1.125rem;
+  }
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.table {
+  display: table;
+  margin: 0 auto;
+}
+.table .horizontal-li li {
+  display: inline;
+}
+
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: var(--lh);
 }
 
 ul {
@@ -15,31 +61,31 @@ a {
   text-decoration: none;
 }
 
-.nav-container {
+.header-navbar {
   background: skyblue;
   color: black;
   overflow: hidden;
 }
-.nav-container a {
+.header-navbar a {
   padding: 10px 15px;
   font-size: 15px;
   float: left;
 }
-.nav-container a:hover {
+.header-navbar a:hover {
   background-color: white;
 }
-.nav-container a:visited {
+.header-navbar a:visited {
   color: black;
 }
-.nav-container a:active {
+.header-navbar a:active {
   background-color: rgb(255, 172, 186);
 }
 
-.content-container {
-  text-align: center;
+.section-title {
+  margin-left: 10%;
 }
 
-.footer-container {
+.footer-socials {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -47,16 +93,20 @@ a {
   height: 8%;
   background: skyblue;
   overflow: hidden;
+  text-align: center;
 }
-.footer-container li {
-  padding: 0px 60px;
+.footer-socials li {
+  padding: 0px;
+  padding-right: 40px;
   float: left;
 }
-
-.table {
-  display: table;
-  margin: 0 auto;
+.footer-socials .li-img {
+  padding-right: 5px;
 }
-.table #horizontal-li li {
-  display: inline;
+.footer-socials .img-socials {
+  width: 30px;
+  height: 30px;
+}
+.footer-socials #footer-socials-table {
+  margin-top: 15px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,9 +1,65 @@
-//General
+//Setup
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --ff-primary: 'Source Sans Pro', sans-seriff;
+  --ff-secondary: 'Source Code Pro', monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #90dcff;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body:1rem;
+  --lh: 1.6;
+}
+
+@media (min-width: 800px){
+  :root{
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body:1.125rem;
+  }
+}
+
+img {
+  display:block;
+  max-width: 100%;
+}
+
+.table{
+  display: table;
+  margin: 0 auto;
+
+  .horizontal-li{
+    
+      li{
+          display: inline;
+      }
+  }
+} 
+
+//Setup End
+//Initialise
 body {
-    padding: 0;
+    background: var(--clr-light);
+    color: var(--clr-dark);
     margin: 0;
-    font-size: 18px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: var(--lh);
   }
   
   ul{
@@ -15,9 +71,11 @@ body {
   a {
     text-decoration: none;
   }
+//Initialise End
   
+
   //Header
-  .nav-container {
+  .header-navbar {
     background: skyblue;
     color: black;
     overflow: hidden;
@@ -40,14 +98,30 @@ body {
         background-color: rgb(255, 172, 186);
     }
   }
+  //Header End
 
-//Content
-  .content-container{
-    text-align: center;
+
+  .section-title{
+   // background: yellow;
+    margin-left: 10%;
   }
-  
+
+  .section-subtitle{
+   // background: green;
+  }
+
+
+  .section-aboutme{
+    //background: lightgray;
+  }
+
+  .section-links{
+    //background: purple;
+  }
+
+
   //Footer
-  .footer-container{
+  .footer-socials{
     position: absolute;
     left: 0;
     bottom: 0;
@@ -55,20 +129,25 @@ body {
     height: 8%;
     background: skyblue;
     overflow: hidden;
+    text-align: center;
 
     li{
-        padding: 0px 60px;
+        padding: 0px;
+        padding-right: 40px;
         float: left;
     }
-  } 
 
-  .table{
-    display: table;
-    margin: 0 auto;
-
-    #horizontal-li{
-        li{
-            display: inline;
-        }
+    .li-img{
+      padding-right: 5px;
     }
-}
+
+    .img-socials{
+      width: 30px;
+      height: 30px;
+    }
+
+    #footer-socials-table{
+      margin-top: 15px;
+    }
+  } 
+  //Footer end
