@@ -68,7 +68,7 @@ video{
 //Initialise
 body {
     background: var(--clr-light);
-    background-image: url("/media/images/background-b.jpg"); //VS Code requires /
+    background-image: url("media/images/background-b.jpg"); //VS Code requires /
     background-color: rgb(0, 0, 0);
     color: var(--clr-light);
     margin: 0;
