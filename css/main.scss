@@ -14,7 +14,7 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: #fff;
+  --clr-light: rgb(200, 200, 200);
   --clr-dark: #303030;
   --clr-accent: #90dcff;
 
@@ -36,6 +36,12 @@
 
 img {
   display:block;
+  max-width: 800px;
+  max-height: 500px;
+}
+
+video{
+  display: block;
   max-width: 100%;
 }
 
@@ -55,11 +61,14 @@ img {
 //Initialise
 body {
     background: var(--clr-light);
-    color: var(--clr-dark);
+    background-image: url("/media/images/Background - Gradient A.jpg");
+    color: var(--clr-light);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: var(--lh);
+    text-align: center;
+    overflow-y: hidden; /* Hide vertical scrollbar */
   }
   
   ul{
@@ -70,84 +79,104 @@ body {
   
   a {
     text-decoration: none;
+    color: var(--clr-light);
   }
 //Initialise End
   
 
   //Header
-  .header-navbar {
-    background: skyblue;
-    color: black;
-    overflow: hidden;
+.header-navbar {
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 900;
 
-    a{ //Links within each nav 
-        padding: 10px 15px;
-        font-size: 15px;
-        float: left;
-    }
-
-    a:hover{
-        background-color: white;
-    }
-
-    a:visited{
-        color: black;
-    }
-
-    a:active{
-        background-color: rgb(255, 172, 186);
-    }
-  }
-  //Header End
-
-
-  .section-title{
-   // background: yellow;
-    margin-left: 10%;
+  a{ //Links within each nav 
+      padding: 5px 30px;
+      font-size: 17px;
+      float: left;
+      border-radius: 15%;
   }
 
-  .section-subtitle{
-   // background: green;
+  a:hover{
+      background-color: rgba(173, 216, 230, 0.181);
   }
 
-
-  .section-aboutme{
-    //background: lightgray;
+  a:visited{
+      color: rgb(169, 169, 169);
   }
 
-  .section-links{
-    //background: purple;
+  a:active{
+      //background-color: rgb(255, 172, 186);
+  }
+}
+//Header End
+
+
+.section-title{
+  // background: yellow;
+}
+
+.section-subtitle{
+  // background: green;
+}
+
+
+.section-aboutme{
+  //background: lightgray;
+}
+
+.section-links{
+  //background: purple;
+}
+
+
+//Footer
+.footer-socials{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8%;
+  overflow: hidden;
+  text-align: center;
+  font-weight: bold;
+
+  li{
+      padding: 0px;
+      padding-right: 40px;
+      float: left;
   }
 
+  .li-img{
+    padding-right: 5px;
+  }
 
-  //Footer
-  .footer-socials{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 8%;
-    background: skyblue;
-    overflow: hidden;
-    text-align: center;
+  .img-socials{
+    width: 30px;
+    height: 30px;
+  }
 
-    li{
-        padding: 0px;
-        padding-right: 40px;
-        float: left;
-    }
+  #footer-socials-table{
+    margin-top: 15px;
+  }
+} 
+//Footer end
 
-    .li-img{
-      padding-right: 5px;
-    }
 
-    .img-socials{
-      width: 30px;
-      height: 30px;
-    }
+/*npm i swup*/
+.transition-fade{
+  opacity: 1;
+  transition: 500ms;
+  transform: translateY(0);
+  transform-origin: top;
+}
 
-    #footer-socials-table{
-      margin-top: 15px;
-    }
-  } 
-  //Footer end
+html.is-animating .transition-fade{
+  opacity: 1;
+  transform: translateY(100%);
+}
+
+html.is-leaving .transition-fade{
+  opacity: 0;
+}
