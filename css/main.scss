@@ -57,7 +57,6 @@ video{
   margin: 0 auto;
 
   .horizontal-li{
-    
       li{
           display: inline;
       }
@@ -69,7 +68,6 @@ video{
 body {
     background: var(--clr-light);
     background-image: url("../media/images/background-b.jpg");
-    background-color: rgb(0, 0, 0);
     color: var(--clr-light);
     margin: 0;
     font-family: var(--ff-primary);
@@ -178,19 +176,57 @@ body {
 //Footer end
 
 
-/*npm i swup*/
-.transition-fade{
-  opacity: 1;
-  transition: 500ms;
-  transform: translateY(0);
-  transform-origin: top;
+
+
+
+
+//Loader
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
-html.is-animating .transition-fade{
-  opacity: 1;
-  transform: translateY(100%);
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
 }
 
-html.is-leaving .transition-fade{
-  opacity: 0;
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
 }
